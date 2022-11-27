@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mtqoladditions",
+  "name": "MineralTracker QOL Additions",
+  "description": "Adds some QOL features to the MineralTracker mod.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["TheUnderTaker11"],
+  "credits": "LordFokas, creator of MineralTracker",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
