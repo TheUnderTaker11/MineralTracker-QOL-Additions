@@ -73,7 +73,7 @@ public class MTLocateOresCommand implements ICommand {
 						DepositTFC tfcdeposit = (DepositTFC)deposit;
 						boolean isMatch = false;
 						for(String oreStrToCheck : targetOresIfContainsList) {
-							if(tfcdeposit.ore.contains(oreStrToCheck)) {
+							if(tfcdeposit.ore.toLowerCase().contains(oreStrToCheck.toLowerCase())) {
 								isMatch = true;
 								break;
 							}
@@ -186,6 +186,33 @@ public class MTLocateOresCommand implements ICommand {
 		}
 		if(oreParam.toLowerCase().equals("diamond*") || oreParam.toLowerCase().equals("diamond")) {
 			return new String[] {"diamond","kimberlite"};
+		}
+		if(oreParam.toLowerCase().equals("redstone*") || oreParam.toLowerCase().equals("redstone")) {
+			return new String[] {"redstone","cinnabar","cryolite"};
+		}
+		if(oreParam.toLowerCase().equals("lithium*") || oreParam.toLowerCase().equals("lithium")) {
+			return new String[] {"lithium","spodumene"};
+		}
+		if(oreParam.toLowerCase().equals("tungsten*") || oreParam.toLowerCase().equals("tungsten")) {
+			return new String[] {"tungsten","wolframite"};
+		}
+		if(oreParam.toLowerCase().equals("cobal*") || oreParam.toLowerCase().equals("cobal") || oreParam.toLowerCase().equals("cobalt")) {
+			return new String[] {"cobalt","cobal","cobaltite"};
+		}
+		if(oreParam.toLowerCase().equals("titanium*") || oreParam.toLowerCase().equals("titanium")) {
+			return new String[] {"titanium","rutile"};
+		}
+		if(oreParam.toLowerCase().equals("boron*") || oreParam.toLowerCase().equals("boron")) {
+			return new String[] {"boron","borax"};
+		}
+		if(oreParam.toLowerCase().equals("lead*") || oreParam.toLowerCase().equals("lead")) {
+			return new String[] {"lead","galena"};
+		}
+		if(oreParam.toLowerCase().equals("aluminum*") || oreParam.toLowerCase().equals("aluminum")) {
+			return new String[] {"aluminum","bauxite"};
+		}
+		if(oreParam.toLowerCase().equals("beryllium*") || oreParam.toLowerCase().equals("beryllium")) {
+			return new String[] {"beryllium","beryl"};
 		}
 		return splitParam;
 	}
